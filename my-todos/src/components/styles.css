@@ -1,0 +1,82 @@
+.input {
+  display: flex;
+  width: 95%;
+  position: relative;
+  align-items: center;
+}
+
+.input__box {
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px 30px;
+  font-size: 25px;
+  border: none;
+  /* giving animation when being clicked */
+  transition: 0.2s;
+  /* to generate shadow, top/bottom 0px, left/right 0px, shadow width 5px */
+  box-shadow: inset 0 0 5px black;
+}
+
+/* when being clicked/focus, all the surrounding screen becomes dark */
+.input__box:focus {
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.3);
+}
+
+.input__submit {
+  /* make it inside */
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  border-radius: 50px;
+  right: 0px;
+  border: none;
+  font-size: 15px;
+  background-color: dodgerblue;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+}
+
+/* on hover */
+.input__submit:hover {
+  background-color: deepskyblue;
+}
+
+/* on click/active */
+.input__submit:active {
+  /*size become smaller*/
+  transform: scale(0.8);
+  /*shadow become smaller*/
+  box-shadow: 0 0 5px black;
+}
+
+.todos {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.todos__single {
+  display: flex;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+  transition: 0.2s;
+}
+
+.todos__single--text {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
